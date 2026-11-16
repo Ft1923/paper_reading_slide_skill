@@ -1,80 +1,81 @@
 ---
 name: paper-deep-read-slides
-description: 把一篇学术论文 PDF 做成逐段中英对照精读幻灯片：原文+译文+解读、图表加标注读图、全文串讲与背景扩展。用户上传论文并要求精读/讲解/做 PPT 时使用。
+description: Turn an academic paper PDF into a paragraph-by-paragraph bilingual close-reading slide deck — original + translation + commentary, annotated figures with reading steps, and a full-paper synthesis with background. Use when a user uploads a paper and asks for a close reading, explanation, or slides.
 ---
 
-# 论文精读幻灯片（中英对照 + 图表标注 + 串讲）
+# Paper close-reading slides (bilingual + annotated figures + synthesis)
 
-目标：读者拿到这套幻灯片后，不翻原文也能逐段读懂论文，看懂每张图，并知道整篇文章在讲一个什么故事、放在领域里是什么位置。
+Goal: with this deck in hand, the reader can understand the paper paragraph by paragraph without opening the original, understand every figure, and know what story the whole paper tells and where it sits in its field.
 
-## 0. 交付形式
-- 默认做成 Slides 类型的演示文稿（可导出 .pptx / PDF）。只有用户明确要 .pptx 文件时才用 pptx 技能。
-- 16:9，1920×1080；所有文字 ≥ 24px。
-- 语言：讲解用用户的语言（通常中文），原文保留英文。
+## 0. Deliverable
+- Default to a Slides-type presentation (exportable to .pptx / PDF). Use the pptx skill only when the user explicitly asks for a .pptx file.
+- 16:9, 1920×1080; all text ≥ 24px.
+- Language: commentary and translation in the user's language (e.g. Chinese); the original text stays in English.
 
-## 1. 读论文（先读完再动手）
-1. `pdfinfo` 看页数；`pdftotext -layout` 先通读一遍。
-2. 双栏论文要**按栏提取**（`pdftotext -x -y -W -H` 分左右栏），否则段落会串行。逐栏拼回正确的段落顺序。
-3. `pdftoppm -r 200` 把每页渲染成图，逐页看：确认图、表、方案、公式在哪一页；注意 PDF 里漏印的公式（如有，用标准写法补上并在页面上注明）。
-4. 列出全文结构：摘要、引言各段、每个结果小节（含小标题）、结论；每段的核心论点一句话；每张图的分图和它支撑的论点。
+## 1. Read the paper (finish reading before building)
+1. `pdfinfo` for the page count; skim the whole paper once with `pdftotext -layout`.
+2. For two-column papers, **extract column by column** (`pdftotext -x -y -W -H` on the left and right columns), otherwise paragraphs interleave. Reassemble paragraphs in the correct order.
+3. Render every page with `pdftoppm -r 200` and look at each one: locate every figure, table, scheme, and equation; watch for equations missing from the PDF (if any, supply the standard form and say so on the slide).
+4. Outline the paper: abstract, each introduction paragraph, each results subsection (with subheadings), conclusions; one-sentence claim per paragraph; each figure's panels and the claim each one supports.
 
-## 2. 拆段规则
-- 按原文段落顺序，一段一页。
-- 段落太长（英文 > ~180 词，或中文译文放不下）时，**按完整意群拆**成 2–3 页，页眉标“第 n 段 · 1/2”。拆点放在论证转折处（现象→解释、方法→结论），不要从句子中间断。
-- 参考文献角标删掉；`<sup>/<sub>` 转成 Unicode 上下标（转不了的写成 ^()/_ 形式）。
+## 2. Splitting rules
+- Follow the original paragraph order, one paragraph per slide.
+- If a paragraph is too long (English > ~180 words, or the translation does not fit), **split at complete units of meaning** into 2–3 slides, with a header like "Paragraph n · 1/2". Split at turns in the argument (observation → explanation, method → conclusion), never mid-sentence.
+- Remove citation superscripts; convert `<sup>/<sub>` to Unicode super/subscripts (write ^() / _ forms when no Unicode character exists).
 
-## 3. 幻灯片类型（按顺序）
-1. **封面**：期刊/年份/页码、英文标题、中文标题、作者与单位、三个标签（逐段对照 / 图表标注 / 串讲）。
-2. **一页读懂**：问题 / 发现 / 解法 三栏 + “本讲解怎么用”说明。
-3. **术语表 1–2 页**：读懂本文必须的 6–12 个概念（材料、现象、方法），每个 1–2 句大白话。
-4. **章节过渡页**：深色底，编号 + 章节名 + 一句“这一节要回答什么问题”。
-5. **正文段落页**（主体）：
-   - 页眉：章节胶囊标签 + “第 n 段 · x/y”；
-   - 标题：用一句话写出这段的**论点**（不是“第 3 段”这种空标题），注意因果写准确；
-   - 左栏英文原文（衬线体），右栏中文译文（关键结论加粗着色）；
-   - 底部“解读”条：类比、为什么重要、和前后文的联系、作者的保留措辞（tentatively 等）。
-   - 右栏下方有空白时，可放“对照框”（公式、逻辑链、定义）。
-6. **公式页**：深色公式条（公式 + 每个符号/趋势的一句说明）+ 中英对照 + 解读。
-7. **图表解读页**：每个分图都要覆盖。布局按图的比例选：单图左置 + 右侧步骤；两图/三图横排 + 下方 2×2 步骤。内容固定为：
-   - “怎么看”4 步（坐标轴是什么 → 各条线/颜色代表什么 → 关键特征在哪 → 和正文哪句话对应）；
-   - 深色“读图结论”一句话。
-8. **全文串讲（8–10 页）**：
-   - 一句话主旨（强调色整页）；
-   - 因果链图（两条对照路线，用箭头框）；
-   - 论点–证据–出处表；
-   - 核心概念对比表（如“经典理论 vs 本文”）；
-   - 背景扩展 2 页（领域现状与痛点、理论发展时间线）；
-   - 值得学的实验设计；
-   - 批判性阅读（作者自己的限定、正文没讨论的数据点、方法学可追问处）；
-   - 关键数字速查表；
-   - 三句话复述全文（结束页）。
+## 3. Slide types (in order)
+1. **Cover**: journal / year / pages, English title, translated title, authors and affiliations, three tags (paragraph-by-paragraph / annotated figures / synthesis).
+2. **One-page overview**: three columns — problem / finding / solution — plus a note on how to use the deck.
+3. **Glossary, 1–2 slides**: the 6–12 concepts needed to read this paper (materials, phenomena, methods), each in 1–2 plain-language sentences.
+4. **Section dividers**: dark background, number + section name + one sentence on "what question this section answers".
+5. **Paragraph slides** (the bulk):
+   - Header: section pill tag + "Paragraph n · x/y";
+   - Title: one sentence stating the paragraph's **claim** (not an empty "Paragraph 3"); get the causality right;
+   - Left column: English original (serif); right column: translation (key conclusions bold and colored);
+   - Bottom "Commentary" bar: analogies, why it matters, links to what comes before and after, the authors' hedges ("tentatively", etc.).
+   - When the right column has empty space, add a "reference box" there (equation, chain of reasoning, definition).
+6. **Equation slides**: a dark equation bar (the equation + one line per symbol/trend) + bilingual text + commentary.
+7. **Figure slides**: cover every panel. Choose the layout by aspect ratio: single image on the left + steps on the right; two or three images in a row + 2×2 steps below. Fixed content:
+   - "How to read it" in 4 steps (what the axes are → what each line/color means → where the key features are → which sentence in the text it supports);
+   - a dark "Takeaway" bar with one sentence.
+8. **Full-paper synthesis (8–10 slides)**:
+   - one-sentence thesis (full-bleed accent-color slide);
+   - causal-chain diagram (two contrasting pathways in arrow boxes);
+   - claim → evidence → source table;
+   - core concept comparison table (e.g. "classical theory vs this paper");
+   - background, 2 slides (state of the field and its pain points; timeline of the theory);
+   - experimental design worth learning from;
+   - critical reading (the authors' own caveats, data points the text does not discuss, methodological questions);
+   - key-numbers cheat sheet;
+   - the paper retold in three sentences (closing slide).
 
-## 4. 图表标注（“在图上写写画画”）
-1. 用 `pdftoppm -r 300` 渲染含图页，按分图裁剪（坐标先在 200dpi 图上估，再换算）。
-2. **定位技巧**：给裁好的图叠一层 10×10 的编号网格另存一份，读网格图来确定标注的相对坐标（0–1），再在原图上画。
-3. 用 PIL 画：半透明色带分区、箭头、虚线框/椭圆、编号圆点、带边框的中文标签。
-   - 字体：Noto Sans CJK；CJK 字体里缺的字符（上下标数字、⁻、₀ 等）按字符回退到 DejaVu Sans，否则会显示方块。
-   - 标签别压在数据曲线上；放不下就给图像加白边（上/下/右）再写。
-   - 颜色固定 4–5 种，并且和讲解里的区间/路线颜色一致。
-4. 画完拼成缩略图总览检查一遍：有无遮挡、错位、标签越界。
-5. 上传为资源，幻灯片里用返回的 `/_blob/<id>` 引用。
+## 4. Figure annotation ("drawing on the figures")
+0. **Check the guide library first**: `figure-guides/` has one reading guide per figure type (CV/LSV, RDE/Levich, Tafel, EIS/DRT, XPS, XRD, SEM, plating Coulombic efficiency, full cell). Before writing the reading steps, drawing annotations, or raising questions, open the matching file and consult its case library. For a figure type not in the library, create a new guide from `figure-guides/_TEMPLATE.md`. After finishing a paper, append the new experience to the matching guide's case library.
+1. Render figure pages with `pdftoppm -r 300` and crop each panel (estimate coordinates on the 200 dpi render, then convert).
+2. **Positioning trick**: overlay a numbered 10×10 grid on a copy of each cropped panel and read the grid image to get relative coordinates (0–1) for annotations; then draw on the clean image.
+3. Draw with PIL: semi-transparent shaded regions, arrows, dashed boxes / ellipses, numbered circles, bordered text labels.
+   - Fonts: Noto Sans CJK for CJK text; fall back per character to DejaVu Sans for glyphs the CJK font lacks (super/subscript digits, ⁻, ₀, etc.), otherwise they render as boxes.
+   - Do not cover data curves with labels; if there is no room, pad the image (top/bottom/right) and write there.
+   - Use a fixed set of 4–5 colors, consistent with the colors used for regions/pathways in the commentary.
+4. Assemble a contact sheet of all annotated panels and check for overlaps, misplacements, and labels running off the edge.
+5. Upload as assets and reference them in slides by the returned `/_blob/<id>`.
 
-## 5. 版式
-- 一套 CSS 共享：深色（如 #14213D）、浅底两种（正文页 / 图表页）、一个强调色（如 #C4561F）、一个辅助色（如 #1F6F8B）。
-- 字体：中文正文 Noto Sans SC，中文标题 Noto Serif SC，英文原文 EB Garamond。
-- 字号层级固定 4–5 档；页码与引文作为 24px 页脚。
-- 用脚本批量生成（内容写成结构化数据：段落页/图表页/自定义页），改一处全套生效。
+## 5. Visual style
+- One shared CSS: a dark color (e.g. #14213D), two light backgrounds (paragraph slides / figure slides), one accent (e.g. #C4561F), one secondary (e.g. #1F6F8B).
+- Fonts: Noto Sans SC for Chinese body text, Noto Serif SC for Chinese headings, EB Garamond for the English original.
+- A fixed type scale of 4–5 sizes; page number and citation as a 24px footer.
+- Generate slides with a script (content as structured data: paragraph / figure / custom slides) so one change applies everywhere.
 
-## 6. 检查（发布前必须做）
-- 本地用无头浏览器把全部幻灯片渲染成图，脚本检查：内容底边是否超过 ~1000px、卡片 `scrollHeight > clientHeight`（文字溢出）。
-- 抽看封面、长段落页、每种图表布局、串讲页的截图。
-- 溢出就：精简措辞 → 缩小单图高度 → 拆页。不要把字号降到 24px 以下。
-- 核对：每个数字、电位、单位与原文一致；作者的 “tentatively / qualitative” 等保留语气保留下来。
+## 6. Checks (required before publishing)
+- Render every slide locally with a headless browser and check by script: content bottom beyond ~1000px, and cards with `scrollHeight > clientHeight` (text overflow).
+- Spot-check screenshots of the cover, long paragraph slides, each figure layout, and the synthesis slides.
+- On overflow: tighten wording → shrink single-image height → split the slide. Never drop text below 24px.
+- Verify every number, potential, and unit against the original; keep the authors' hedges ("tentatively", "qualitative").
 
-## 7. 发布后的追问（评论驱动迭代）
-用户常在某页评论里追问基础概念。处理方式：
-- **概念性问题**（“X 是什么、怎么测”）：在该页后插入一页补充图解，用 matplotlib 或 PIL 画原理示意图（如装置图、分层浓度分布、方程曲线），配“怎么看”步骤和一句结论；必要时开一个“补充章节”（过渡页 + 多页）。
-- **“写在空白处”**：在该页右栏空白处加对照框（公式 / 逻辑链 / 定义），不新增页。
-- **质疑型问题**：在评论里直接、诚实地回答（作者做了什么、没证明什么、还需要什么实验），并提议加进“批判性阅读”页。
-- 发现自己原先的标题或解读有因果错误时，顺手改正并在回复里说明。
-- 每次都先重新读要改的文件确认版本，只发布改动的文件；回复写在评论线程里，会话里只留一句话。
+## 7. Follow-up questions after publishing (comment-driven iteration)
+Users often ask about basic concepts in comments on a slide. Handle them as follows:
+- **Concept questions** ("what is X, how is it measured"): insert a supplementary explainer slide after that slide, with a schematic drawn in matplotlib or PIL (apparatus, layered concentration profile, equation curves), "how to read it" steps, and a one-line takeaway; open a "supplementary section" (divider + several slides) when needed.
+- **"Write it in the empty space"**: add a reference box in the slide's empty right-column space (equation / chain of reasoning / definition) instead of a new slide.
+- **Challenge questions**: answer directly and honestly in the comment (what the authors did, what they did not prove, what experiment would settle it), and offer to add it to the critical-reading slide.
+- If you find that one of your own titles or commentaries had the causality wrong, fix it and say so in the reply.
+- Each time, re-read the file you will change to confirm its version and publish only the changed files; reply in the comment thread and keep the session message to one line.
