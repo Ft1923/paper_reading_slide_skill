@@ -1,62 +1,62 @@
-# X 射线衍射 XRD 读法（含二维 XRD 与织构分析）
+# Reading guide: X-ray diffraction XRD (including 2D-XRD and texture analysis)
 
-## 这张图测什么
-晶体中的原子面对 X 射线发生衍射，满足布拉格方程 2d·sinθ = nλ 时出峰。峰位 → 物相（晶面间距）；峰强比 → 晶粒取向（织构）；峰宽 → 晶粒尺寸/应变。
+## What this figure measures
+Atomic planes in a crystal diffract X-rays, giving peaks when Bragg's law 2d·sinθ = nλ is satisfied. Peak position → phase (interplanar spacing); peak intensity ratios → grain orientation (texture); peak width → crystallite size / strain.
 
-## 坐标轴与常见形式
-- 常规 XRD：横轴 2θ（Cu Kα，λ = 1.5406 Å），纵轴强度；多条曲线上下错开排列，底部常放标准卡片（PDF 卡）竖线。
-- 二维 XRD：探测器照片，衍射环（德拜环）；沿环的角度为 γ（方位角）。
-- γ 积分图：横轴 γ，纵轴强度，反映某晶面在不同方向上的分布。
+## Axes and common forms
+- Conventional XRD: x-axis 2θ (Cu Kα, λ = 1.5406 Å), y-axis intensity; several patterns stacked with vertical offsets, often with standard reference (PDF card) sticks at the bottom.
+- 2D-XRD: a detector image showing diffraction rings (Debye rings); the angle around a ring is γ (azimuth).
+- γ-integrated plot: x-axis γ, y-axis intensity, showing how a given plane is distributed over directions.
 
-## 锌的常用参考（Cu Kα，以 PDF 卡片为准）
-| 晶面 | 2θ 约 | 标准卡片相对强度（随机取向） |
+## Common Zn references (Cu Kα; verify against the PDF card)
+| Plane | 2θ approx. | Relative intensity on the standard card (random orientation) |
 |---|---|---|
 | (002) | 36.3° | ~50% |
 | (100) | 39.0° | ~40% |
-| (101) | 43.2° | 100%（最强） |
+| (101) | 43.2° | 100% (strongest) |
 | (102) | 54.3° | ~25% |
 | (103)/(110) | 70.1°/70.6° | ~20% |
 
-碱式硫酸锌（ZHS，层状）在低角度有强峰（层间距对应），具体位置随结晶水数目变化，按卡片核对。
+Zinc hydroxide sulfate (ZHS, layered) has a strong low-angle peak (corresponding to its interlayer spacing); its exact position varies with the number of crystal waters — check against the card.
 
-## 读图步骤
-1. 确认射线源、扫描范围、样品形式（电极直接测/刮粉）。
-2. 用竖线把每个峰对到标准卡片：哪些是目标相、基底（不锈钢、Cu 集流体）、副产物。
-3. 比较峰强比与标准卡片：某一晶面异常强 → 织构。
-4. 定量织构：I(002)/ΣI(hkl)，或 Harris 织构系数 TC(hkl)。
-5. 二维 XRD：环是连续均匀（细晶、取向连续）、断续斑点（少数大晶粒）、还是集中在一段弧（强织构）。
-6. γ 积分：单一窄峰（Δγ 小）= 取向集中；多尖峰 = 若干取向不同的大晶粒。
+## Reading steps
+1. Confirm the X-ray source, scan range, and sample form (measured directly on the electrode / scraped powder).
+2. Match every peak to a reference card with vertical lines: target phase, substrate (stainless steel, Cu current collector), or by-product.
+3. Compare intensity ratios with the standard card: one plane anomalously strong → texture.
+4. Quantify texture: I(002)/ΣI(hkl), or the Harris texture coefficient TC(hkl).
+5. 2D-XRD: is the ring continuous and uniform (fine grains, continuous orientation), broken into spots (a few large grains), or concentrated on an arc (strong texture)?
+6. γ integration: a single narrow peak (small Δγ) = concentrated orientation; multiple sharp peaks = several large grains with different orientations.
 
-## 关键特征 → 含义
-| 图上的特征 | 物理含义 |
+## Key features → meaning
+| Feature in the figure | Physical meaning |
 |---|---|
-| 新峰出现 | 新物相（如副产物 ZHS、ZnO） |
-| (002) 相对 (101) 异常强 | (002) 织构：基面平行于表面 |
-| 峰变宽 | 晶粒变小或微观应变（Scherrer 公式） |
-| 峰位整体偏移 | 晶格常数变化、样品高度误差 |
-| 2D 环断续成斑 | 大晶粒、统计性差 |
+| New peaks appear | A new phase (e.g. by-product ZHS, ZnO) |
+| (002) anomalously strong relative to (101) | (002) texture: basal planes parallel to the surface |
+| Peaks broaden | Smaller crystallites or microstrain (Scherrer equation) |
+| All peaks shifted | Lattice parameter change or sample-height error |
+| 2D rings broken into spots | Large grains, poor statistics |
 
-## 标注建议
-- 半透明竖带标出关键峰（如 ZHS 一条色带、Zn(002) 一条色带），横向比较各条曲线在该处是否有峰。
-- 每条曲线旁写条件（如电位 −1075 / −1150 / −1300 mV）。
-- 织构比例柱状图上用箭头连出趋势，写出数值。
-- 2D-XRD 照片上圈出斑点、标出各环对应的晶面。
+## Annotation suggestions
+- Use semi-transparent vertical bands over key peaks (e.g. one band for ZHS, one for Zn(002)) to compare across patterns whether a peak is present.
+- Label each pattern with its condition (e.g. potential −1075 / −1150 / −1300 mV).
+- On a texture-fraction bar chart, connect bars with arrows to show the trend and write the values.
+- On 2D-XRD images, circle spots and label which plane each ring belongs to.
 
-## 常见陷阱 / 可以追问的地方
-- 基底峰与目标峰重叠（不锈钢、铜箔），归属要先排除。
-- 织构比较要用同一几何、同一归一化方式；与标准卡片比，而不是只看绝对强度。
-- XRD 穿透深度大（微米级），测到的是整层沉积 + 基底，不只是表面。
-- 非晶的 SEI 组分在 XRD 中看不到；“没有峰”不等于“没有副产物”。
+## Common pitfalls / questions to ask
+- Substrate peaks overlapping target peaks (stainless steel, Cu foil): rule them out before assigning.
+- Texture comparisons need the same geometry and normalization; compare with the standard card, not absolute intensities alone.
+- XRD penetrates deeply (micrometers), so it measures the whole deposit + substrate, not just the surface.
+- Amorphous SEI components are invisible to XRD; "no peak" does not mean "no by-product".
 
-## 案例库
+## Case library
 
-### Baffour et al. 2026, JACS — 图 1a–d（基底织构）
-- 体系：不同粒径锌粉冷压成电极。
-- 图上看到什么：粒径从 2 μm 增到 200 μm，(101) 逐渐消失，只剩 (002)；2D 环从斑点状变为连续明亮弧；γ 积分在 Δγ≈5° 内含 >95% (002) 晶粒。
-- 读法收获：常规 XRD 看“有哪些晶面”，2D-XRD + γ 积分看“取向有多集中”，两者配合。
+### Baffour et al. 2026, JACS — Figures 1a–d (substrate texture)
+- System: electrodes cold-pressed from Zn powders of different particle sizes.
+- What the figure shows: as particle size increases from 2 μm to 200 μm, (101) gradually disappears and only (002) remains; 2D rings change from spotty to continuous bright arcs; γ integration shows >95% of (002) grains within Δγ ≈ 5°.
+- Reading lesson: conventional XRD shows "which planes are present"; 2D-XRD + γ integration shows "how concentrated the orientation is" — use them together.
 
-### Baffour et al. 2026, JACS — 图 3e、3f（沉积层）
-- 体系：不锈钢上在 −1075、−1150、−1300 mV 沉积的锌。
-- 图上看到什么：−1075 mV 时 ZHS 峰与 Zn(002) 峰强度相当；−1300 mV 时 ZHS 消失，只剩尖锐 (002)；I(002)/ΣI ≈ 47% → 81% → 95%。
-- 作者的解读：沉积越快，锌越能赢过副反应，且非外延地长成 (002)。
-- 读法收获：同一体系只改一个变量（电位/速率）的系列 XRD，用竖色带比较“某峰有无”，最直观地展示“竞争”。
+### Baffour et al. 2026, JACS — Figures 3e, 3f (deposits)
+- System: Zn deposited on stainless steel at −1075, −1150, −1300 mV.
+- What the figure shows: at −1075 mV the ZHS peak and the Zn(002) peak are of comparable intensity; at −1300 mV ZHS disappears and only a sharp (002) remains; I(002)/ΣI ≈ 47% → 81% → 95%.
+- Authors' interpretation: the faster the deposition, the more Zn wins over side reactions, growing non-epitaxially as (002).
+- Reading lesson: an XRD series that changes only one variable (potential / rate), with vertical color bands to compare "peak present or not", is the most direct way to show "competition".

@@ -1,35 +1,35 @@
-# 〈图的类型〉读法
+# Reading guide: 〈figure type〉
 
-## 这张图测什么
-一两句话：测量原理、得到的物理量。
+## What this figure measures
+One or two sentences: the measurement principle and the physical quantity obtained.
 
-## 坐标轴与常见形式
-- 横轴：
-- 纵轴：
-- 常见变体：
+## Axes and common forms
+- x-axis:
+- y-axis:
+- Common variants:
 
-## 读图步骤
+## Reading steps
 1. 
 2. 
 3. 
 4. 
 
-## 关键特征 → 含义
-| 图上的特征 | 物理含义 |
+## Key features → meaning
+| Feature in the figure | Physical meaning |
 |---|---|
 |  |  |
 
-## 标注建议（在图上画什么）
+## Annotation suggestions (what to draw on the figure)
 - 
 
-## 常见陷阱 / 可以追问的地方
+## Common pitfalls / questions to ask
 - 
 
-## 案例库
+## Case library
 
-### 作者 年份, 期刊 — 图 X
-- 体系：
-- 图上看到什么：
-- 作者的解读：
-- 我的判断 / 追问：
-- 读法收获：
+### Author Year, Journal — Figure X
+- System:
+- What the figure shows:
+- Authors' interpretation:
+- My assessment / questions:
+- Reading lesson:

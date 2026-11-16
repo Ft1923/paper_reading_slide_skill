@@ -1,52 +1,52 @@
-# 循环伏安 CV / 线性扫描 LSV / I–V 曲线读法
+# Reading guide: cyclic voltammetry CV / linear sweep LSV / I–V curves
 
-## 这张图测什么
-以固定扫速改变工作电极电位，记录电流。电流的起伏是各个电化学反应的“指纹”：在哪个电位开始、有多快、能不能逆过来。
+## What this figure measures
+The working-electrode potential is swept at a fixed rate while the current is recorded. Rises and falls in current are the "fingerprints" of electrochemical reactions: where they start, how fast they are, and whether they can be reversed.
 
-## 坐标轴与常见形式
-- 横轴：工作电极电位 E（注明参比：vs Ag/AgCl、SHE、Zn²⁺/Zn……）。注意方向：有的图电位越往右越负。
-- 纵轴：电流或电流密度 j。注意符号约定：IUPAC 规定阳极（氧化）电流为正；部分文献（尤其美式）把阴极电流画成正值。
-- LSV：只扫一个方向；CV：扫过去再扫回来，形成闭合回线。
+## Axes and common forms
+- x-axis: working-electrode potential E (note the reference: vs Ag/AgCl, SHE, Zn²⁺/Zn …). Check the direction: in some figures the potential becomes more negative to the right.
+- y-axis: current or current density j. Check the sign convention: IUPAC plots anodic (oxidation) current as positive; some papers (especially the US convention) plot cathodic current as positive.
+- LSV: one sweep direction only; CV: forward and reverse sweeps form a closed loop.
 
-## 读图步骤
-1. 确认参比电极、扫速、工作电极材料、电解液、是否搅拌/旋转。
-2. 找扫描方向（箭头或文字），分清正扫与回扫。
-3. 按电位划分区间：无电流区 → 起始（onset）→ 指数上升（动力学控制）→ 平台/峰（传质控制）→ 再上升（新反应或电对流）。
-4. 每个区间对应什么反应：主反应（如 Zn 沉积）还是副反应（析氢、电解液分解）。
-5. 有回扫时：比较阴极峰与阳极峰的大小、位置、面积。
+## Reading steps
+1. Confirm the reference electrode, scan rate, working-electrode material, electrolyte, and whether the solution is stirred / rotated.
+2. Find the sweep direction (arrow or text) and separate the forward and reverse sweeps.
+3. Divide the curve into potential regimes: no current → onset → exponential rise (kinetic control) → plateau / peak (mass-transport control) → further rise (a new reaction or electroconvection).
+4. Assign each regime to a reaction: the main reaction (e.g. Zn deposition) or a side reaction (hydrogen evolution, electrolyte decomposition).
+5. With a reverse sweep: compare the size, position, and area of the cathodic and anodic peaks.
 
-## 关键特征 → 含义
-| 图上的特征 | 物理含义 |
+## Key features → meaning
+| Feature in the figure | Physical meaning |
 |---|---|
-| 电流从 ≈0 开始指数上升 | 反应起始，Butler–Volmer 动力学控制 |
-| 起始电位比理论值更负/更正 | 过电位：成核能垒、界面浓度降低（能斯特负移）、膜阻 |
-| 峰（升后降） | 表面反应物耗尽，转为扩散控制；静止溶液中扩散层随时间变厚 |
-| 平台 | 稳态传质极限（搅拌、RDE 中常见） |
-| 平台后再上扬 | 新反应开始，或电对流导致“过极限”电流 |
-| 阴极峰 ≫ 阳极峰 | 不可逆：产物离开（气体）或变成惰性固体 |
-| ΔEp ≈ 59/n mV、峰电流比≈1 | 可逆的溶液相氧化还原对 |
-| ip ∝ v^½ | 扩散控制；ip ∝ v 为表面吸附/薄层控制 |
-| 金属沉积 CV 中的“交叉环”（回扫电流高于正扫） | 成核过电位：已成核表面上继续沉积更容易 |
-| 阳极剥离峰面积 / 阴极沉积面积 | 粗略的库伦效率 |
+| Current rises exponentially from ≈0 | Reaction onset, Butler–Volmer kinetic control |
+| Onset more negative/positive than the theoretical value | Overpotential: nucleation barrier, lowered interfacial concentration (Nernstian shift), film resistance |
+| Peak (rise then fall) | Reactant depleted at the surface, transition to diffusion control; in still solution the diffusion layer grows with time |
+| Plateau | Steady-state mass-transport limit (common with stirring or RDE) |
+| Rise again after the plateau | A new reaction starts, or electroconvection gives "overlimiting" current |
+| Cathodic peak ≫ anodic peak | Irreversible: products leave (gas) or become inert solids |
+| ΔEp ≈ 59/n mV, peak current ratio ≈ 1 | Reversible solution-phase redox couple |
+| ip ∝ v^½ | Diffusion control; ip ∝ v indicates surface-adsorbed / thin-layer control |
+| "Crossover loop" in a metal-deposition CV (reverse-sweep current higher than forward) | Nucleation overpotential: deposition continues more easily on already-nucleated surface |
+| Anodic stripping peak area / cathodic deposition area | Rough Coulombic efficiency |
 
-## 标注建议
-- 用半透明色带把电位区间分开，并编号（①副反应 ②起始 ③扩散限制 ④过极限）。
-- 竖虚线标 onset、平衡电位；文字给出双参比数值（如 “−1075 mV vs Ag/AgCl ≈ −878 mV vs SHE”）。
-- 用箭头标扫描方向；用圆圈标峰，并写清“峰说明什么”。
-- 放大插图要指出它在说明什么（如“回扫阳极电流极小 → 不可逆”）。
+## Annotation suggestions
+- Separate potential regimes with semi-transparent bands and number them (① side reactions ② onset ③ diffusion limited ④ overlimiting).
+- Mark the onset and equilibrium potential with vertical dashed lines; give values against both references (e.g. "−1075 mV vs Ag/AgCl ≈ −878 mV vs SHE").
+- Mark the sweep direction with arrows; circle peaks and write what each peak indicates.
+- For a zoomed inset, state what it demonstrates (e.g. "tiny anodic current on the reverse sweep → irreversible").
 
-## 常见陷阱 / 可以追问的地方
-- “峰的存在”与“峰的不对称”是两件事：前者说明传质限制，后者说明不可逆。
-- onset 的判定标准（阈值电流、切线交点）不同，数值会差几十 mV。
-- 是否做了 iR 补偿？大电流下欧姆压降会让曲线变形。
-- 工作电极是惰性基底还是金属本身：前者需要先成核，起始电位更负。
-- 电位轴是否反向、电流符号约定，读数前先确认。
+## Common pitfalls / questions to ask
+- "A peak exists" and "the peaks are asymmetric" are two different statements: the first indicates transport limitation, the second irreversibility.
+- Different onset criteria (threshold current, tangent intersection) change the value by tens of mV.
+- Was iR compensation applied? Ohmic drop distorts curves at high current.
+- Is the working electrode an inert substrate or the metal itself? On an inert substrate the metal must nucleate first, so the onset is more negative.
+- Confirm whether the potential axis is reversed and which current sign convention is used before reading values.
 
-## 案例库
+## Case library
 
-### Baffour et al. 2026, JACS — 图 2a、2b
-- 体系：不锈钢工作电极，2 M ZnSO₄，Ag/AgCl 参比，5 mV/s。
-- 图上看到什么：2a 的 I–V 分四段：−1075 mV 以前电流≈0；之后指数上升；~−1400 mV 变缓；~−1600 mV 再上扬。2b 只扫 −200 到 −1050 mV：#6 处出现峰，回扫阳极电流极小。
-- 作者的解读：锌起始前是副反应区；峰说明副反应本身也受扩散限制；阴极电流 ≫ 阳极 → 副反应不可逆。按液相扩散估算 δ≈3900 μm（荒谬），因此瓶颈在 SEI。
-- 我的判断 / 追问：起始电位比理论值负约 120 mV，能斯特负移（界面 Zn²⁺ 被消耗）最多解释几十 mV，成核过电位应占相当部分。
-- 读法收获：在“主反应还没开始”的电位窗口里测，可以把副反应电流单独分离出来；“看似电流为零”的区间值得放大看。
+### Baffour et al. 2026, JACS — Figures 2a, 2b
+- System: stainless-steel working electrode, 2 M ZnSO₄, Ag/AgCl reference, 5 mV/s.
+- What the figure shows: the I–V curve in 2a has four regimes: current ≈0 before −1075 mV; exponential rise afterwards; flattening from ~−1400 mV; a further rise from ~−1600 mV. 2b sweeps only from −200 to −1050 mV: a peak at #6, and very small anodic current on the reverse sweep.
+- Authors' interpretation: the region before Zn onset is a side-reaction regime; the peak means the side reactions are themselves diffusion limited; cathodic ≫ anodic current → the side reactions are irreversible. A liquid-phase diffusion estimate gives δ ≈ 3900 μm (absurd), so the bottleneck is the SEI.
+- My assessment / questions: the onset is ~120 mV more negative than theory; a Nernstian shift (interfacial Zn²⁺ consumed) can explain at most a few tens of mV, so nucleation overpotential should account for a large part.
+- Reading lesson: measuring in a potential window where the main reaction has not started isolates the side-reaction current; regions that "look like zero current" are worth zooming into.

@@ -1,46 +1,46 @@
-# 金属负极镀/剥：库伦效率（CE）与对称电池电压曲线读法
+# Reading guide: metal-anode plating/stripping — Coulombic efficiency (CE) and symmetric-cell voltage profiles
 
-## 这张图测什么
-恒电流把金属镀到集流体（如 Cu、不锈钢）上，再剥离回来，比较两步的电量：CE = 剥离电量 / 沉积电量。衡量金属负极的可逆性。对称电池（Zn||Zn）的电压–时间曲线则看过电位与短路。
+## What this figure measures
+Metal is plated onto a current collector (e.g. Cu, stainless steel) at constant current and then stripped back; the charges of the two steps are compared: CE = stripping charge / plating charge. This measures metal-anode reversibility. Voltage–time profiles of symmetric cells (Zn||Zn) show overpotential and short circuits.
 
-## 坐标轴与常见形式
-- CE–循环图：横轴循环圈数，纵轴 CE（%）。
-- CE–电流密度图：横轴电流密度，纵轴平均 CE。
-- 电压–时间 / 电压–容量曲线：镀锌段电压为负（或低），剥锌段为正（或高）。
-- 对称电池长循环：横轴时间（h），纵轴电压，呈方波。
+## Axes and common forms
+- CE vs cycle: x-axis cycle number, y-axis CE (%).
+- CE vs current density: x-axis current density, y-axis average CE.
+- Voltage–time / voltage–capacity profiles: the plating segment is negative (or lower), the stripping segment positive (or higher).
+- Long symmetric-cell cycling: x-axis time (h), y-axis voltage, a square wave.
 
-## 读图步骤
-1. 确认条件：电流密度（mA/cm²）、单次容量（mAh/cm²）、电极面积、电解液用量、集流体。电流和容量都要看，只报一个没有意义。
-2. CE–循环图：初始几圈（化成）CE 多少；稳定后平均 CE；波动幅度；何时失效。
-3. 电压曲线：过电位大小（成核过电位尖峰 + 稳定平台）；是否随循环变大；有无突然下降或剧烈抖动。
-4. 跨条件比较：哪个电流/电解液下 CE 更高、更稳定。
+## Reading steps
+1. Confirm the conditions: current density (mA/cm²), capacity per cycle (mAh/cm²), electrode area, electrolyte amount, current collector. Both current and capacity matter; reporting only one is meaningless.
+2. CE vs cycle: CE in the first few (formation) cycles; average CE once stable; size of fluctuations; when it fails.
+3. Voltage profiles: overpotential (nucleation spike + steady plateau); does it grow with cycling? any sudden drop or violent fluctuation?
+4. Compare across conditions: which current / electrolyte gives higher, more stable CE.
 
-## 关键特征 → 含义
-| 图上的特征 | 物理含义 |
+## Key features → meaning
+| Feature in the figure | Physical meaning |
 |---|---|
-| 稳定 CE ≥ 99% | 可逆性好；99.9% 以上才支撑上千次长循环 |
-| CE 剧烈波动（甚至 > 100%） | 软短路、“死金属”重新接通、测量不稳定 |
-| CE 突然掉落 / 测试中断 | 短路或电解液耗尽 |
-| 对称电池电压突然变小、变平 | 枝晶短路 |
-| 过电位逐渐增大 | SEI 增厚、电解液消耗 |
-| 第一圈电压尖峰 | 成核过电位 |
+| Stable CE ≥ 99% | Good reversibility; only ≥ 99.9% supports thousands of cycles |
+| CE fluctuates wildly (even > 100%) | Soft short circuits, "dead metal" reconnecting, unstable measurement |
+| CE drops suddenly / test stops | Short circuit or electrolyte depletion |
+| Symmetric-cell voltage suddenly shrinks and flattens | Dendrite short circuit |
+| Overpotential gradually increases | SEI thickening, electrolyte consumption |
+| Voltage spike in the first cycle | Nucleation overpotential |
 
-## 标注建议
-- 用不同颜色区分电流密度，旁边直接写“1 mA/cm²：CE 乱跳，~50 圈失效”。
-- CE–电流图：竖虚线标临界电流，左右用色带分“副反应竞争区 / 沉积占优区”，写出 CE 跳变的数值。
-- 电压曲线：标成核尖峰、过电位、短路点。
+## Annotation suggestions
+- Distinguish current densities by color and write directly beside them, e.g. "1 mA/cm²: CE erratic, fails after ~50 cycles".
+- CE vs current: mark the critical current with a vertical dashed line, shade the "side-reaction competition region / deposition-dominated region" on either side, and write the CE jump values.
+- Voltage profiles: mark the nucleation spike, overpotential, and short-circuit point.
 
-## 常见陷阱 / 可以追问的地方
-- 容量太小（如 0.5 mAh/cm²）、电解液过量时，CE 和寿命会被高估。
-- 用的是 Aurbach 法（预沉积储备锌）还是直接循环？两者的 CE 不能直接比。
-- CE > 100% 的点说明有问题，不能取平均掩盖。
-- 只报“循环 X 小时”而不报电流与容量，无法评价。
+## Common pitfalls / questions to ask
+- Very small capacities (e.g. 0.5 mAh/cm²) and excess electrolyte overstate CE and lifetime.
+- Was the Aurbach method (pre-deposited Zn reservoir) used, or direct cycling? CEs from the two are not directly comparable.
+- Points with CE > 100% signal a problem and should not be averaged away.
+- Reporting only "cycled for X hours" without current and capacity cannot be evaluated.
 
-## 案例库
+## Case library
 
-### Baffour et al. 2026, JACS — 图 5a、5b
-- 体系：半电池，2 M ZnSO₄，固定 3 mAh/cm²，电流 0.2–100 mA/cm²。
-- 图上看到什么：1 mA/cm² 时 CE 在 45–110% 乱跳，约 50 圈失效；15 mA/cm² 时稳定 ~97%。CE–电流图：55% → 79% → 91% → 在 ~15 mA/cm² 处达到 ~96% 平台，到 100 mA/cm² 不再提高。
-- 作者的解读：存在临界电流 j_critical ≈ 15 j_s；低电流时 SEI 副反应占优，长出尖锐随机沉积物导致短路；高于 j_critical 时锌沉积占优。
-- 我的判断 / 追问：j_critical ≈ 15 j_s 是经验关系；论文没有给出 j_critical 对应的负极电位（半电池无参比）。
-- 读法收获：“CE 对电流密度”的图能直接揭示竞争机制；小电流不一定更温和。
+### Baffour et al. 2026, JACS — Figures 5a, 5b
+- System: half cells, 2 M ZnSO₄, fixed 3 mAh/cm², currents 0.2–100 mA/cm².
+- What the figure shows: at 1 mA/cm², CE jumps between 45% and 110% and fails after ~50 cycles; at 15 mA/cm², stable at ~97%. CE vs current: 55% → 79% → 91% → a ~96% plateau reached at ~15 mA/cm², with no further gain up to 100 mA/cm².
+- Authors' interpretation: there is a critical current j_critical ≈ 15 j_s; at low current, SEI-forming side reactions dominate and grow sharp, randomly oriented deposits that cause shorts; above j_critical, Zn deposition dominates.
+- My assessment / questions: j_critical ≈ 15 j_s is an empirical relation; the paper does not report the anode potential at j_critical (the half cells have no reference electrode).
+- Reading lesson: a "CE vs current density" plot can directly reveal a competition mechanism; lower current is not necessarily gentler.

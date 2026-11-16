@@ -1,47 +1,47 @@
-# 扫描电镜 SEM 形貌图读法（含 EDX）
+# Reading guide: SEM morphology images (including EDX)
 
-## 这张图测什么
-用电子束扫描样品表面，看形貌、颗粒/晶粒大小与排列。电池论文里主要用来比较不同条件下金属沉积或 SEI 的形貌。EDX 给出元素分布。
+## What this figure measures
+An electron beam scans the sample surface to show morphology and the size and arrangement of particles / grains. In battery papers it is mainly used to compare metal deposits or SEI morphology across conditions. EDX gives elemental distribution.
 
-## 坐标轴与常见形式
-- 无坐标轴，**看比例尺**（左下/右下的横条）。
-- 常见排布：一行一个条件，从左到右逐级放大（如 10 μm → 2 μm → 200 nm）；或一列俯视图 + 一列截面图。
+## Axes and common forms
+- No axes: **read the scale bar** (the bar at the lower left / right).
+- Common layouts: one row per condition, magnifying from left to right (e.g. 10 μm → 2 μm → 200 nm); or one column of top views + one column of cross sections.
 
-## 读图步骤
-1. 先读每张图的比例尺，确定视野大小；同一行的放大关系。
-2. 低倍图看整体：是否均匀覆盖、平整还是起伏、有无裂纹/孔洞。
-3. 高倍图看单元：片状/针状/颗粒/树枝；片的朝向（平躺 or 竖立）；是否致密。
-4. 跨条件比较：同一放大倍数下逐行对比，找出变化趋势。
-5. 有 EDX 时，对照元素图判断哪部分是金属、哪部分是副产物（S、O 富集处往往是硫酸盐/氧化物）。
+## Reading steps
+1. Read every scale bar first to know the field of view and the magnification relationship within a row.
+2. Low magnification for the overall picture: uniform coverage? flat or undulating? cracks / holes?
+3. High magnification for the building blocks: platelets / needles / particles / dendrites; platelet orientation (lying flat or standing up); dense or porous.
+4. Compare across conditions at the same magnification, row by row, to find the trend.
+5. With EDX, use the element maps to tell metal from by-products (S- and O-rich regions are often sulfates / oxides).
 
-## 关键特征 → 含义（金属负极）
-| 图上的特征 | 物理含义 |
+## Key features → meaning (metal anodes)
+| Feature in the figure | Physical meaning |
 |---|---|
-| 六方片平躺、层层堆叠 | (002) 取向沉积，致密、可逆性好 |
-| 片竖起、随机朝向，疏松多孔 | 苔藓状沉积，比表面积大、副反应多 |
-| 尖锐针状/树枝 | 枝晶，可能刺穿隔膜 |
-| 表面覆盖细小纳米片 | SEI / 副产物（如 ZHS） |
-| 亮暗衬度差异 | 成分或导电性差异（金属亮、绝缘副产物易荷电） |
+| Hexagonal platelets lying flat, stacked layer on layer | (002)-oriented deposit, dense, good reversibility |
+| Platelets standing up, randomly oriented, porous | Mossy deposit, high surface area, more side reactions |
+| Sharp needles / branches | Dendrites, may pierce the separator |
+| Surface covered by fine nanosheets | SEI / by-products (e.g. ZHS) |
+| Bright/dark contrast differences | Differences in composition or conductivity (metal is bright; insulating by-products charge easily) |
 
-## 标注建议
-- 每行左侧标条件（电位、电流、循环数），右侧一句话总结形貌。
-- 在高倍图上用虚线分隔不同区域（如“左：锌 / 右：SEI 针状物”）。
-- 用箭头指出代表性特征（竖立片、平铺片、孔洞）。
+## Annotation suggestions
+- Label the condition on the left of each row (potential, current, cycle number) and summarize the morphology in one sentence on the right.
+- On high-magnification images, separate regions with dashed lines (e.g. "left: Zn / right: needle-like SEI").
+- Point to representative features with arrows (upright platelets, flat platelets, holes).
 
-## 常见陷阱 / 可以追问的地方
-- 代表性：一张图是否代表整片电极？是否给出多个区域或低倍全景？
-- 制样：拆电池、清洗、干燥、空气暴露都可能改变形貌或溶掉副产物。
-- 只有俯视图看不出厚度和孔隙率，最好有截面图。
-- “更致密”“更平整”是定性描述，可追问是否有粗糙度、孔隙率等定量数据。
+## Common pitfalls / questions to ask
+- Representativeness: does one image represent the whole electrode? Are several regions or a low-magnification overview shown?
+- Sample preparation: disassembly, washing, drying, and air exposure can change morphology or dissolve by-products.
+- Top views alone do not show thickness or porosity; cross sections are better.
+- "Denser" and "flatter" are qualitative; ask whether roughness or porosity was quantified.
 
-## 案例库
+## Case library
 
-### Baffour et al. 2026, JACS — 图 4（四个电位下的形貌）
-- 体系：不锈钢上恒电位沉积，−1000 / −1050 / −1075 / −1300 mV vs Ag/AgCl。
-- 图上看到什么：−1000、−1050 mV（锌未沉积）时 SEI 片晶随机竖立且越来越乱；−1075 mV 时锌团块与 SEI 片混杂，锌沿 SEI 晶体形核；−1300 mV 时只见致密、平铺的六方锌片。
-- 作者的解读：SEI 自身也会“过极限”失稳；锌在 SEI 上形核导致织构丢失；快沉积时锌非外延地长成 (002) 片。
-- 读法收获：按“电位递进 × 放大倍数递进”的网格排布，可以直接读出一条连续的演化故事。
+### Baffour et al. 2026, JACS — Figure 4 (morphology at four potentials)
+- System: potentiostatic deposition on stainless steel at −1000 / −1050 / −1075 / −1300 mV vs Ag/AgCl.
+- What the figure shows: at −1000 and −1050 mV (before Zn deposits), SEI platelets stand up randomly and become increasingly disordered; at −1075 mV, Zn clusters mix with SEI platelets, and Zn nucleates along SEI crystals; at −1300 mV, only dense, flat-lying hexagonal Zn platelets are visible.
+- Authors' interpretation: the SEI itself also undergoes "overlimiting" instability; Zn nucleating on the SEI causes loss of texture; under fast deposition Zn grows non-epitaxially as (002) platelets.
+- Reading lesson: a grid arranged as "potential progression × magnification progression" reads directly as a continuous evolution story.
 
-### Baffour et al. 2026, JACS — 图 1e–i、2f
-- 图 1：未织构锌粗糙；织构锌致密、晶粒细，高倍下晶粒间冷焊结合。图 2f：−950 mV 下表面被致密平铺的纳米片 SEI 均匀覆盖。
-- 读法收获：SEM 常作为电化学结论（如 EIS 成膜回环）的“眼见为实”证据，读图时把它和对应的电化学图连起来讲。
+### Baffour et al. 2026, JACS — Figures 1e–i, 2f
+- Fig. 1: untextured Zn is rough; textured Zn is dense with fine grains, and at high magnification the grains are cold-welded together. Fig. 2f: at −950 mV the surface is uniformly covered by dense, flat-lying nanosheet SEI.
+- Reading lesson: SEM often serves as the "seeing is believing" evidence for an electrochemical conclusion (e.g. a film-formation loop in EIS); when explaining the figure, connect it to the corresponding electrochemical figure.

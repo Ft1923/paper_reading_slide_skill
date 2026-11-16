@@ -1,50 +1,50 @@
-# 电化学阻抗谱 EIS（Nyquist / Bode）与 DRT 读法
+# Reading guide: electrochemical impedance spectroscopy EIS (Nyquist / Bode) and DRT
 
-## 这张图测什么
-在某个直流电位（开路或偏置）上叠加小幅交流信号（通常 5–10 mV），从高频扫到低频，测阻抗 Z = Z′ + jZ″。不同物理过程有不同的特征时间，在不同频段显现。
+## What this figure measures
+A small AC signal (typically 5–10 mV) is superimposed on a DC potential (open circuit or a bias) and swept from high to low frequency to measure the impedance Z = Z′ + jZ″. Different physical processes have different characteristic times and show up in different frequency ranges.
 
-## 坐标轴与常见形式
-- Nyquist：横轴 Z′（实部），纵轴 −Z″（虚部取负，使电容性弧在上方）。**高频在左，低频在右**；单位 Ω 或 Ω·cm²。两轴刻度应等比例，否则半圆会变形。
-- Bode：横轴 log f，纵轴 |Z| 和相位角。
-- DRT（弛豫时间分布）：横轴 τ（或 log τ，τ = 1/2πf），纵轴 γ(τ)；每个峰对应一个独立过程。
+## Axes and common forms
+- Nyquist: x-axis Z′ (real part), y-axis −Z″ (negative imaginary part, so capacitive arcs appear above the axis). **High frequency on the left, low frequency on the right**; units Ω or Ω·cm². Both axes should use equal scales, otherwise semicircles look distorted.
+- Bode: x-axis log f; y-axes |Z| and phase angle.
+- DRT (distribution of relaxation times): x-axis τ (or log τ, τ = 1/2πf), y-axis γ(τ); each peak corresponds to a distinct process.
 
-## 读图步骤
-1. 确认测量条件：开路还是偏置电位、频率范围、幅值、是否原位（in-operando）、体系是否稳态。
-2. 高频与实轴交点 = 欧姆电阻 R_s（电解液 + 接触）。
-3. 中频半圆：直径 ≈ R_ct（电荷转移）或 R_SEI（界面膜）；多个半圆对应多个界面过程，高频弧通常是膜，中频是电荷转移。
-4. 低频：45° 直线 = Warburg 半无限扩散；接近垂直 = 阻塞/电容行为；弧线回到实轴下方 = 感抗回环。
-5. 若有等效电路拟合，检查电路元件是否都有物理意义、拟合误差。
-6. DRT：数峰个数，按 τ 从小到大对应从快到慢的过程；比较不同条件下峰位、峰面积的移动。
+## Reading steps
+1. Confirm the measurement conditions: open circuit or biased, frequency range, amplitude, whether in operando, whether the system was at steady state.
+2. High-frequency intercept with the real axis = ohmic resistance R_s (electrolyte + contacts).
+3. Mid-frequency semicircle: diameter ≈ R_ct (charge transfer) or R_SEI (interfacial film); several semicircles mean several interfacial processes — the higher-frequency arc is usually the film, the mid-frequency one charge transfer.
+4. Low frequency: a 45° line = semi-infinite Warburg diffusion; near-vertical = blocking / capacitive behavior; an arc that returns below the real axis = inductive loop.
+5. If an equivalent circuit was fitted, check that every element has a physical meaning and look at the fitting error.
+6. DRT: count the peaks; going from small to large τ corresponds to fast to slow processes; compare shifts in peak position and area across conditions.
 
-## 关键特征 → 含义
-| 图上的特征 | 物理含义 |
+## Key features → meaning
+| Feature in the figure | Physical meaning |
 |---|---|
-| 高频截距 | 欧姆电阻 R_s |
-| 半圆（R ∥ CPE） | 电荷转移或膜阻，直径越大越难 |
-| 两个以上半圆 | 界面膜 + 电荷转移等多个过程 |
-| 45° 直线 | Warburg 扩散，液相传质控制 |
-| 低频感抗回环（落到实轴以下） | 吸附中间体、表面成膜/腐蚀、有效面积变化 |
-| 半圆随时间/循环变大 | SEI 增厚、钝化 |
-| DRT 峰向长 τ 移动 | 该过程变慢 |
+| High-frequency intercept | Ohmic resistance R_s |
+| Semicircle (R ∥ CPE) | Charge-transfer or film resistance; larger diameter = harder |
+| Two or more semicircles | Several processes, e.g. interfacial film + charge transfer |
+| 45° line | Warburg diffusion, liquid-phase mass-transport control |
+| Low-frequency inductive loop (dipping below the real axis) | Adsorbed intermediates, surface film formation / corrosion, change in active area |
+| Semicircle grows with time / cycling | SEI thickening, passivation |
+| DRT peak shifts to longer τ | That process has slowed down |
 
-## 标注建议
-- 标出 R_s 截距、半圆直径（双箭头）、45° 参考线。
-- 用箭头标“频率增大方向”。
-- 感抗回环处圈出并写“成膜/吸附信号”。
-- 插图（如 OCP 谱）要单独说明它代表的状态。
+## Annotation suggestions
+- Mark the R_s intercept, the semicircle diameter (double-headed arrow), and a 45° reference line.
+- Add an arrow showing the direction of increasing frequency.
+- Circle any inductive loop and label it "film formation / adsorption signal".
+- Explain separately what state an inset (e.g. the OCP spectrum) represents.
 
-## 常见陷阱 / 可以追问的地方
-- 非稳态体系（正在长膜、正在析气）测得的阻抗可能不满足 Kramers–Kronig 关系，拟合需谨慎。
-- 等效电路不唯一：同一谱可用多种电路拟合，结论要有其他证据支撑。
-- 两轴不等比例会让半圆看起来像椭圆，误判过程个数。
-- DRT 结果依赖正则化参数，峰的归属多为“初步”；核对正文给出的 τ 值与“移动了几个数量级”是否一致。
-- 对称电池与三电极测得的阻抗含义不同（前者包含两个电极）。
+## Common pitfalls / questions to ask
+- Impedance measured on a non-steady system (a growing film, gas evolution) may violate the Kramers–Kronig relations; fit with caution.
+- Equivalent circuits are not unique: one spectrum can be fitted by several circuits, so conclusions need other supporting evidence.
+- Unequal axis scales make semicircles look elliptical and lead to miscounting processes.
+- DRT results depend on the regularization parameter, and peak assignments are often "tentative"; check that the τ values in the text agree with the stated "shift by N orders of magnitude".
+- Impedance from a symmetric cell and from a three-electrode cell mean different things (the former includes two electrodes).
 
-## 案例库
+## Case library
 
-### Baffour et al. 2026, JACS — 图 2e、图 S14（DRT）
-- 体系：2 M ZnSO₄，原位 EIS；开路 vs −950 mV vs Ag/AgCl（副反应生成 SEI 的电位）。
-- 图上看到什么：开路时为接近 45° 的 Warburg 直线；−950 mV 时出现大圆弧，低频端回折成“感抗样”回环。DRT 两个主峰，作者归属 τ≈0.2 s 为本体传输、τ≈10⁻⁵ s 为 SEI 内传输。
-- 作者的解读：低频回环 = 成膜；离子传输主导机制转为穿过 SEI 的受限传输。
-- 我的判断 / 追问：正文称峰位移“近 6 个数量级”，但给出的两个 τ 相差约 4 个数量级，读时应核对 SI；DRT 归属作者用了“tentatively”。
-- 读法收获：同一体系在“开路”和“偏置到副反应电位”两种状态下对比，是捕捉成膜过程的好设计。
+### Baffour et al. 2026, JACS — Figure 2e, Figure S14 (DRT)
+- System: 2 M ZnSO₄, in-operando EIS; open circuit vs −950 mV vs Ag/AgCl (a potential where side reactions form the SEI).
+- What the figure shows: at open circuit, a near-45° Warburg line; at −950 mV, a large arc that folds back at low frequency into an "inductive-like" loop. DRT shows two main peaks; the authors assign τ ≈ 0.2 s to bulk transport and τ ≈ 10⁻⁵ s to transport within the SEI.
+- Authors' interpretation: the low-frequency loop = film formation; the dominant ion-transport mechanism switches to restricted transport through the SEI.
+- My assessment / questions: the text says the peak shifts by "nearly 6 orders of magnitude", but the two τ values given differ by about 4 orders; check the SI. The authors call the DRT assignments "tentative".
+- Reading lesson: comparing the same system at open circuit and biased to a side-reaction potential is a good design for capturing film formation.

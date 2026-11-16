@@ -1,55 +1,55 @@
-# X 射线光电子能谱 XPS 读法
+# Reading guide: X-ray photoelectron spectroscopy XPS
 
-## 这张图测什么
-用 X 射线打出原子内层电子，测其结合能（BE）。同一元素在不同化学环境（价态、配位原子）下 BE 会偏移，用来判断表面（约 5–10 nm 深）的成分与化学状态，常用于分析 SEI。
+## What this figure measures
+X-rays eject core-level electrons, and their binding energy (BE) is measured. The same element shifts in BE depending on its chemical environment (oxidation state, coordinating atoms), which reveals the composition and chemical state of the surface (~5–10 nm deep). Commonly used to analyze the SEI.
 
-## 坐标轴与常见形式
-- 横轴：结合能 BE（eV），**通常从左往右减小**。
-- 纵轴：强度（counts 或 a.u.）。
-- 常见图：全谱（survey）+ 各元素高分辨谱，黑点/细线为原始数据，彩色填充为分峰拟合，包络线为拟合总和。
+## Axes and common forms
+- x-axis: binding energy BE (eV), **usually decreasing from left to right**.
+- y-axis: intensity (counts or a.u.).
+- Typical figures: a survey spectrum + high-resolution spectra per element; black dots/thin line = raw data, colored fills = fitted components, envelope = sum of the fit.
 
-## 读图步骤
-1. 确认能量校准（通常 C 1s 污染碳 = 284.8 eV）、样品处理（是否清洗、是否惰性转移）、是否刻蚀（深度剖析）。
-2. 先看全谱：有哪些元素。
-3. 看各元素高分辨谱：主峰位置、峰形是否对称、分了几个峰。
-4. 每个拟合峰对照参考 BE 归属；检查分峰约束（自旋轨道分裂间距、面积比、半峰宽）是否合理。
-5. 比较不同条件（电位、循环次数、刻蚀深度）下各组分的相对比例变化。
+## Reading steps
+1. Confirm the energy calibration (usually adventitious C 1s = 284.8 eV), sample handling (washed or not, inert transfer or not), and whether sputtering was used (depth profiling).
+2. Survey spectrum first: which elements are present.
+3. High-resolution spectra: main peak position, symmetric or not, how many fitted components.
+4. Assign each fitted component against reference BEs; check that the fitting constraints (spin–orbit splitting, area ratios, FWHM) are reasonable.
+5. Compare relative proportions of components across conditions (potential, cycle number, sputter depth).
 
-## 常用参考值（以文献/数据库为准）
-| 谱线 | 参考结合能 / 规则 |
+## Common reference values (verify against literature / databases)
+| Line | Reference BE / rule |
 |---|---|
-| C 1s 污染碳 | 284.8 eV（校准基准） |
-| Zn 2p | 2p₃/₂ 与 2p₁/₂ 间距 ≈ 23.0 eV；Zn⁰ 与 ZnO 的 2p₃/₂ 都约 1021.5–1022.5 eV，难区分 |
-| Zn LMM 俄歇 | 区分 Zn⁰ 与 Zn²⁺ 的更好手段（动能/修正俄歇参数） |
-| O 1s | 晶格 O²⁻ ~530 eV；–OH ~531.5 eV；硫酸根/吸附水 ~532–533 eV |
-| S 2p | 硫酸根 ~168–169 eV；硫化物 ~161–162 eV |
-| F 1s | 金属氟化物 ~684–685 eV；C–F/有机氟 ~688 eV |
+| C 1s adventitious carbon | 284.8 eV (calibration reference) |
+| Zn 2p | 2p₃/₂–2p₁/₂ splitting ≈ 23.0 eV; Zn⁰ and ZnO 2p₃/₂ both ≈ 1021.5–1022.5 eV, hard to distinguish |
+| Zn LMM Auger | The better way to distinguish Zn⁰ from Zn²⁺ (kinetic energy / modified Auger parameter) |
+| O 1s | Lattice O²⁻ ~530 eV; –OH ~531.5 eV; sulfate / adsorbed water ~532–533 eV |
+| S 2p | Sulfate ~168–169 eV; sulfide ~161–162 eV |
+| F 1s | Metal fluoride ~684–685 eV; C–F / organic fluorine ~688 eV |
 
-## 关键特征 → 含义
-| 图上的特征 | 物理含义 |
+## Key features → meaning
+| Feature in the figure | Physical meaning |
 |---|---|
-| 主峰向高 BE 移动 | 原子周围是更电负性的配体（O、F、S–O），被氧化程度更高 |
-| 双峰间距符合自旋轨道分裂 | 归属同一元素同一状态（检验拟合是否自洽） |
-| 刻蚀后组分比例变化 | SEI 的分层结构（外层有机/内层无机等） |
-| 宽峰、不对称 | 多种化学环境叠加或荷电 |
+| Main peak shifts to higher BE | The atom is surrounded by more electronegative ligands (O, F, S–O), more oxidized |
+| Doublet spacing matches the spin–orbit splitting | Same element, same state (a self-consistency check on the fit) |
+| Component ratios change after sputtering | Layered SEI structure (organic outer / inorganic inner, etc.) |
+| Broad, asymmetric peak | Several overlapping chemical environments, or charging |
 
-## 标注建议
-- 竖线标主峰 BE，写出归属；双向箭头标自旋轨道分裂间距。
-- 分峰用文字直接标在峰上（“Zn–OH”“S–Oₙ/结晶水”）。
-- 与参考值差异大的峰，在旁边写“比常见值高 X eV → 可能原因”。
+## Annotation suggestions
+- Vertical line at the main-peak BE with its assignment; a double-headed arrow for the spin–orbit splitting.
+- Write component labels directly on the peaks ("Zn–OH", "S–Oₙ / crystal water").
+- For peaks far from reference values, note beside them "X eV higher than usual → possible causes".
 
-## 常见陷阱 / 可以追问的地方
-- 校准方式没写，或绝缘样品荷电，整体峰位会偏移几 eV。
-- 只用 Zn 2p 判断金属锌 vs 锌盐不可靠，应看俄歇峰。
-- 分峰数量与约束的随意性：过度拟合可以“拟合出”任何组分。
-- 样品转移暴露空气、清洗溶剂都会改变表面成分。
-- XPS 只看表面几纳米，不能代表整层厚 SEI。
+## Common pitfalls / questions to ask
+- If the calibration is not stated, or an insulating sample charges, all peaks may be shifted by several eV.
+- Zn 2p alone cannot reliably distinguish metallic Zn from Zn salts; check the Auger peak.
+- Arbitrary numbers of components and constraints: overfitting can "find" any species.
+- Air exposure during transfer and washing solvents can change the surface composition.
+- XPS sees only the top few nanometers and cannot represent a thick SEI as a whole.
 
-## 案例库
+## Case library
 
-### Baffour et al. 2026, JACS — 图 3c、3d
-- 体系：不锈钢上在 −950 mV vs Ag/AgCl 生成的 SEI，2 M ZnSO₄。
-- 图上看到什么：Zn 2p 双峰间距 ≈23 eV；Zn 2p₃/₂ 在 1025.8 eV；O 1s 主峰 535.2 eV，右侧小峰为 Zn–OH。
-- 作者的解读：高 BE 来自 ZHS（碱式硫酸锌）中 Zn–O–S 成键环境；O 1s 主峰为 S–Oₙ 与结晶水（“tentatively”）。
-- 我的判断 / 追问：1025.8 eV 与 535.2 eV 都比常见文献值高 3 eV 左右，需确认能量校准与荷电校正；最好有 S 2p 与 XRD 交叉验证（本文图 3e 有 XRD）。
-- 读法收获：BE 整体偏高时，先怀疑荷电/校准，再讨论化学环境。
+### Baffour et al. 2026, JACS — Figures 3c, 3d
+- System: SEI formed on stainless steel at −950 mV vs Ag/AgCl, 2 M ZnSO₄.
+- What the figure shows: Zn 2p doublet spacing ≈ 23 eV; Zn 2p₃/₂ at 1025.8 eV; O 1s main peak at 535.2 eV, with a smaller component on the right assigned to Zn–OH.
+- Authors' interpretation: the high BE comes from the Zn–O–S bonding environment in ZHS (zinc hydroxide sulfate); the O 1s main peak is S–Oₙ plus crystal water ("tentatively").
+- My assessment / questions: both 1025.8 eV and 535.2 eV are about 3 eV higher than common literature values; the energy calibration and charge correction should be confirmed. S 2p and XRD cross-checks would help (XRD is in Fig. 3e).
+- Reading lesson: when all BEs are uniformly high, suspect charging / calibration before discussing chemical environment.

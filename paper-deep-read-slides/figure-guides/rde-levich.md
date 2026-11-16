@@ -1,52 +1,52 @@
-# 旋转圆盘电极（RDE）：转速系列 LSV、Levich 图、Koutecký–Levich 图读法
+# Reading guide: rotating disk electrode (RDE) — LSV at several speeds, Levich plot, Koutecký–Levich plot
 
-## 这张图测什么
-电极旋转把溶液沿轴线“吸”向表面、再沿表面甩出，液相扩散层厚度 δ 由转速 ω 精确控制。看电流随转速怎么变：
-- 随 ω 变 → 受液相传质控制；
-- 不随 ω 变 → 受反应动力学或界面膜（SEI）控制。
+## What this figure measures
+The rotating electrode draws solution up along its axis and flings it out across the surface, so the liquid diffusion-layer thickness δ is precisely set by the rotation speed ω. The question is how the current changes with speed:
+- changes with ω → controlled by liquid-phase mass transport;
+- independent of ω → controlled by reaction kinetics or an interfacial film (SEI).
 
-## 核心公式
-- δ = 1.61 D^(1/3) ν^(1/6) ω^(−1/2)（ω 用 rad/s；ω = 2π·rpm/60）
-- Levich：j_lim = 0.62 nF D^(2/3) ν^(−1/6) ω^(1/2) C_b → j_lim ∝ √ω，过原点直线
-- Koutecký–Levich：1/j = 1/j_k(或 j_s) + 1/j_lim → 1/j 对 ω^(−1/2) 作直线；截距 = 1/j_k，斜率 → D
-- 水溶液运动黏度 ν ≈ 0.01 cm²/s
+## Core equations
+- δ = 1.61 D^(1/3) ν^(1/6) ω^(−1/2) (ω in rad/s; ω = 2π·rpm/60)
+- Levich: j_lim = 0.62 nF D^(2/3) ν^(−1/6) ω^(1/2) C_b → j_lim ∝ √ω, a straight line through the origin
+- Koutecký–Levich: 1/j = 1/j_k (or j_s) + 1/j_lim → 1/j vs ω^(−1/2) is a straight line; intercept = 1/j_k, slope → D
+- Kinematic viscosity of aqueous solutions ν ≈ 0.01 cm²/s
 
-## 坐标轴与常见形式
-1. 转速系列 LSV：横轴 E，纵轴 j，多条颜色代表不同 rpm。
-2. Levich 图：横轴 ω^½（或 rpm^½），纵轴平台电流。
-3. K–L 图：横轴 ω^(−½)，纵轴 1/j，每条线对应一个电位。
+## Axes and common forms
+1. LSV at several speeds: x-axis E, y-axis j, one colored curve per rpm.
+2. Levich plot: x-axis ω^½ (or rpm^½), y-axis plateau current.
+3. K–L plot: x-axis ω^(−½), y-axis 1/j, one line per potential.
 
-## 读图步骤
-1. 在转速系列图里找平台区，看平台高度是否随转速升高、是否在高转速处“挤在一起”。
-2. Levich 图：数据是否落在过原点的直线上？在哪个转速开始偏离（变平）？
-3. K–L 图：是否为直线；外推到 ω^(−½)→0 的截距（转速无穷大时剩下的电流）；斜率反算 D 并与文献比对，作为自洽性检验。
-4. 把转折转速换算成 δ，判断数量级是否合理（正常液相 δ 在 10–100 μm 级）。
+## Reading steps
+1. In the speed series, find the plateau region; check whether the plateau rises with speed and whether high-speed curves "bunch together".
+2. Levich plot: do the points fall on a straight line through the origin? At what speed do they start to deviate (flatten)?
+3. K–L plot: is it linear? Read the intercept extrapolated to ω^(−½)→0 (the current left at infinite speed); back-calculate D from the slope and compare with the literature as a self-consistency check.
+4. Convert the transition speed to δ and check whether the order of magnitude is reasonable (a normal liquid-phase δ is ~10–100 μm).
 
-## 关键特征 → 含义
-| 图上的特征 | 物理含义 |
+## Key features → meaning
+| Feature in the figure | Physical meaning |
 |---|---|
-| 平台随 ω 增大、Levich 线性过原点 | 纯液相扩散控制 |
-| 高转速时平台饱和、Levich 变平 | 出现与转速无关的串联阻力：动力学或界面膜 |
-| K–L 截距 ≠ 0 | j_k / j_s 有限，可求界面反应或膜传输速率 |
-| 由斜率算出的 D 异常小（≪10⁻⁶ cm²/s） | 传输不在液相，而在固体/准固体层中 |
-| Levich 直线不过原点 | 存在动力学贡献或电位还没到传质极限 |
+| Plateau grows with ω, Levich linear through the origin | Pure liquid-phase diffusion control |
+| Plateau saturates at high speed, Levich flattens | A speed-independent series resistance appears: kinetics or an interfacial film |
+| K–L intercept ≠ 0 | Finite j_k / j_s; the interfacial reaction or film transport rate can be extracted |
+| D from the slope is anomalously small (≪10⁻⁶ cm²/s) | Transport is not in the liquid but in a solid / quasi-solid layer |
+| Levich line does not pass through the origin | Kinetic contribution, or the potential has not reached the transport limit |
 
-## 标注建议
-- 转速系列图：红框框出平台；竖箭头“转速↑ 平台↑”；标出饱和的那几条线。
-- Levich 图：画一条过原点的理想直线（虚线）与实测饱和段对比，标“转折 ≈ X rpm，δ ≈ Y μm”。
-- K–L 图：向左外推到 y 轴的箭头，“截距 = 1/j_s”；斜率旁写出求得的 D。
+## Annotation suggestions
+- Speed series: box the plateau in red; vertical arrow "speed ↑ plateau ↑"; mark the curves that saturate.
+- Levich plot: draw an ideal dashed line through the origin to contrast with the saturating data; label "transition ≈ X rpm, δ ≈ Y μm".
+- K–L plot: an arrow extrapolating left to the y-axis, "intercept = 1/j_s"; write the fitted D next to the slope.
 
-## 常见陷阱 / 可以追问的地方
-- 单位：rpm 与 rad/s 混用；图上横轴到底是 rpm^½ 还是 ω^½（rad/s）。
-- 平台是否真的达到传质极限（电位够不够）。
-- 测得的是整个圆盘的平均值：局部 SEI 不均匀时，参数只是平均。
-- 若被比较的材料放在对电极上（而非工作电极），工作电极电位只能定性反映它的驱动力。
+## Common pitfalls / questions to ask
+- Units: rpm vs rad/s mixed up; is the x-axis rpm^½ or ω^½ (rad/s)?
+- Has the plateau really reached the transport limit (is the potential sufficient)?
+- The measurement averages over the whole disk; with a non-uniform SEI the parameters are only averages.
+- If the material being compared sits on the counter electrode (not the working electrode), the working-electrode potential only qualitatively reflects its driving force.
 
-## 案例库
+## Case library
 
-### Baffour et al. 2026, JACS — 图 2c、2d、3a、3b
-- 体系：Ø5 mm 不锈钢 RDE，2 M ZnSO₄，扫到 −1050 mV（锌起始前），100–800 rpm。
-- 图上看到什么：副反应平台随转速升高，~600 rpm（√ω≈7.9 rad^½/s^½）后饱和，对应 δ≈11.6 μm；低转速段拟合 D≈8.6×10⁻⁹ cm²/s；K–L 截距给出 SEI 限制速率常数 ~5×10⁻⁶ cm/s，斜率给 D_bulk≈1.85×10⁻⁶ cm²/s（与文献吻合）。3b 中 Pt 与 (002) Zn 对电极的 j_s 几乎一样。
-- 作者的解读：饱和来自 SEI 中缓慢的固态离子传输（“欠极限”传输限制）；副反应主要源于电解液而非锌腐蚀。
-- 我的判断 / 追问：3b 中未织构 Zn 的 j_s 明显更高，正文未讨论；锌是对电极，晶面效应结论应谨慎。
-- 读法收获：“转快了也不涨”是界面膜的典型信号；用斜率反算的 D 与文献对比是检验 K–L 分析可信度的好办法。
+### Baffour et al. 2026, JACS — Figures 2c, 2d, 3a, 3b
+- System: Ø5 mm stainless-steel RDE, 2 M ZnSO₄, swept to −1050 mV (before Zn onset), 100–800 rpm.
+- What the figure shows: the side-reaction plateau rises with speed and saturates beyond ~600 rpm (√ω ≈ 7.9 (rad/s)^½), corresponding to δ ≈ 11.6 μm; a fit of the low-speed segment gives D ≈ 8.6×10⁻⁹ cm²/s; the K–L intercept gives an SEI-limited rate constant of ~5×10⁻⁶ cm/s and the slope gives D_bulk ≈ 1.85×10⁻⁶ cm²/s (consistent with the literature). In 3b, j_s is nearly the same with Pt and (002) Zn counter electrodes.
+- Authors' interpretation: saturation comes from slow solid-state ion transport through the SEI ("underlimiting" transport limitation); the side reactions originate mainly from the electrolyte rather than Zn corrosion.
+- My assessment / questions: in 3b, j_s for untextured Zn is clearly higher, which the text does not discuss; Zn is the counter electrode, so conclusions about crystal-facet effects should be treated with caution.
+- Reading lesson: "spinning faster does not raise the current" is a typical signature of an interfacial film; comparing D back-calculated from the slope with literature values is a good test of whether a K–L analysis is credible.

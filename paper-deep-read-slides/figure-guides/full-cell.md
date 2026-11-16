@@ -1,45 +1,45 @@
-# 全电池性能图读法：容量–循环、电压曲线、倍率
+# Reading guide: full-cell performance — capacity vs cycle, voltage profiles, rate capability
 
-## 这张图测什么
-正负极配成完整电池，在给定倍率下反复充放电，看容量保持、库伦效率、电压平台，评价实用性。
+## What this figure measures
+Cathode and anode are assembled into a complete cell and cycled at a given rate to assess capacity retention, Coulombic efficiency, and voltage plateaus — i.e. practical performance.
 
-## 坐标轴与常见形式
-- 容量–循环（常为双纵轴）：左轴放电容量（mAh/g 或 mAh/cm²），右轴 CE（%），横轴圈数。
-- 电压–容量曲线：横轴容量，纵轴电压；多圈叠加，颜色渐变表示圈数。
-- 电压–时间曲线：横轴时间，显示充/放电时长。
-- 倍率图：不同 C 倍率阶梯式切换，看容量与恢复。
+## Axes and common forms
+- Capacity vs cycle (often with two y-axes): left axis discharge capacity (mAh/g or mAh/cm²), right axis CE (%), x-axis cycle number.
+- Voltage vs capacity: x-axis capacity, y-axis voltage; several cycles overlaid, with a color gradient for cycle number.
+- Voltage vs time: x-axis time, showing charge/discharge durations.
+- Rate plot: stepwise switching between C-rates, showing capacity and recovery.
 
-## 读图步骤
-1. 确认关键参数：面容量（mAh/cm²）、正极载量、N/P 比、电解液用量（E/C 比）、电池形式（扣式 / 软包）、温度。
-2. 弄清倍率定义：1C = 1 小时充/放完；5C = 12 分钟；充放倍率是否相同。
-3. 双轴图：先分清哪组点对哪根轴；看初始容量、化成后的稳定容量、保持率、CE。
-4. 电压曲线：平台电压、极化（充放平台差）、多圈是否重合。
-5. 与同体系文献对比：面容量、倍率、圈数三者一起比。
+## Reading steps
+1. Confirm the key parameters: areal capacity (mAh/cm²), cathode loading, N/P ratio, electrolyte amount (E/C ratio), cell format (coin / pouch), temperature.
+2. Understand the rate definition: 1C = full charge/discharge in 1 hour; 5C = 12 minutes; are the charge and discharge rates the same?
+3. Dual-axis plots: first sort out which data series belongs to which axis; read the initial capacity, the stable capacity after formation, retention, and CE.
+4. Voltage profiles: plateau voltage, polarization (gap between charge and discharge plateaus), whether cycles overlap.
+5. Compare with the literature for the same chemistry: areal capacity, rate, and cycle number together.
 
-## 关键特征 → 含义
-| 图上的特征 | 物理含义 |
+## Key features → meaning
+| Feature in the figure | Physical meaning |
 |---|---|
-| 前几十圈容量下降后趋稳 | 化成 / 活化，或正极溶解后达到平衡 |
-| CE 长期 < 99% | 持续副反应（如穿梭效应、析氢） |
-| 多圈电压曲线重合 | 状态稳定，极化不增长 |
-| 充放平台差增大 | 内阻/界面阻抗增长 |
-| CE 末期出现离散下跌点 | 失效前兆（短路、电解液干涸） |
+| Capacity drops over the first tens of cycles, then stabilizes | Formation / activation, or cathode dissolution reaching equilibrium |
+| CE persistently < 99% | Ongoing side reactions (e.g. shuttling, hydrogen evolution) |
+| Voltage profiles of many cycles overlap | Stable state, no growth in polarization |
+| Growing gap between charge and discharge plateaus | Increasing internal / interfacial resistance |
+| Scattered dips in CE late in cycling | Precursors to failure (short circuit, electrolyte dry-out) |
 
-## 标注建议
-- 双轴图上用颜色把数据点与对应坐标轴连起来，写出稳定容量和 CE。
-- 电压–时间图标“充电 X min / 放电 Y min”，标平台电压。
-- 软包与扣式结果并排时，标出面容量与倍率差异。
+## Annotation suggestions
+- On dual-axis plots, use color to tie each data series to its axis, and write the stable capacity and CE.
+- On voltage–time plots, label "charge X min / discharge Y min" and the plateau voltage.
+- When coin-cell and pouch-cell results are shown side by side, mark the differences in areal capacity and rate.
 
-## 常见陷阱 / 可以追问的地方
-- 低面容量（< 1 mAh/cm²）、过量锌、过量电解液会大幅美化寿命。
-- 只报 mAh/g（按正极活性物质）而不报面容量，难以评估实用性。
-- “快充”要看充电倍率和对应的面容量，二者都要高才有意义。
-- 扣式电池与软包电池结论不能直接互推；软包面积大、副反应更严重。
+## Common pitfalls / questions to ask
+- Low areal capacity (< 1 mAh/cm²), excess Zn, and excess electrolyte greatly flatter lifetime.
+- Reporting only mAh/g (per cathode active material) without areal capacity makes practicality hard to assess.
+- "Fast charging" requires both a high charge rate and a meaningful areal capacity.
+- Conclusions from coin cells and pouch cells do not transfer directly; pouch cells have larger areas and more severe side reactions.
 
-## 案例库
+## Case library
 
-### Baffour et al. 2026, JACS — 图 5c–g（Zn||I₂）
-- 体系：(002) 锌负极 + I₂ 正极；扣式电池充 15 mA/cm²（≈8 min）、放 3 mA/cm²（≈40 min）；5C 连续循环；软包 10C、1 mAh/cm²。
-- 图上看到什么：扣式容量 ≈1.86 mAh/cm²，1100+ 圈几乎不衰减，CE ~92–93%；5C 下 1400–1500 圈曲线几乎重合；软包前 ~150 圈容量从 ~1.3 降到 ~0.95 mAh/cm² 后稳定，约 500 圈。
-- 我的判断 / 追问：全电池 CE ~92% 偏低，可能含碘物种穿梭或析氢损失；软包初期容量下降说明大面积下副反应仍是挑战。
-- 读法收获：“快充慢放”的不对称倍率设计要单独指出；双轴图先分清轴再读数。
+### Baffour et al. 2026, JACS — Figures 5c–g (Zn||I₂)
+- System: (002) Zn anode + I₂ cathode; coin cell charged at 15 mA/cm² (≈8 min) and discharged at 3 mA/cm² (≈40 min); continuous 5C cycling; pouch cell at 10C, 1 mAh/cm².
+- What the figure shows: coin-cell capacity ≈ 1.86 mAh/cm² with almost no fade over 1100+ cycles, CE ~92–93%; at 5C, the curves for cycles 1400–1500 nearly overlap; the pouch cell drops from ~1.3 to ~0.95 mAh/cm² over the first ~150 cycles, then stabilizes, lasting about 500 cycles.
+- My assessment / questions: a full-cell CE of ~92% is low, possibly including iodine-species shuttling or hydrogen-evolution losses; the early capacity drop in the pouch cell shows side reactions remain a challenge at larger areas.
+- Reading lesson: point out asymmetric "fast charge, slow discharge" rate designs explicitly; on dual-axis plots, sort out the axes before reading values.
