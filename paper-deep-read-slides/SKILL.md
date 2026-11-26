@@ -7,6 +7,8 @@ description: Turn an academic paper PDF into a paragraph-by-paragraph bilingual 
 
 Goal: with this deck in hand, the reader can understand the paper paragraph by paragraph without opening the original, understand every figure, and know what story the whole paper tells and where it sits in its field.
 
+**User rules first**: before building, read `user-rules.zh.md` in this folder (the user's accumulated rules, in Chinese). Where it conflicts with this file, it wins — notably: new slides use a plain white background with images placed directly and no layout polishing; every math expression is LaTeX, never plain-text symbols like `R_b`.
+
 ## 0. Deliverable
 - Default to a Slides-type presentation (exportable to .pptx / PDF). Use the pptx skill only when the user explicitly asks for a .pptx file.
 - 16:9, 1920×1080; all text ≥ 24px.
@@ -39,7 +41,7 @@ Goal: with this deck in hand, the reader can understand the paper paragraph by p
    - **Supplementary figures too**: when a paragraph's argument rests on Supplementary Figs./Tables that the main figures do not show, put those right after it as well, under the same rules. Figures mentioned only in passing can be skipped.
    - **"Find the data in the SI and analyse it"**: pull the authors' Source Data and recompute instead of restating the claim. Prefer ratios within one spectrum/sample over absolute intensities, check replicate consistency, and do an order-of-magnitude balance (e.g. monolayer capacity vs bulk change). Close with a table: author's claim / what the data show / verdict.
 6. **Equation slides**: a dark equation bar (the equation + one line per symbol/trend) + bilingual text + commentary.
-   - **Every displayed formula is typeset from LaTeX** — on equation slides, explainers and supplementary sections. Slides cannot render LaTeX, so convert it to SVG with MathJax (`mathjax-full`, `fontCache: 'none'`; light glyphs on dark bars, dark on light), upload it and place it with `<img>`. Symbols inside self-drawn schematics use matplotlib mathtext. Formulas in comment replies are written as `$...$`. Inline symbols in running text may stay as Unicode (section 2).
+   - **Every displayed formula is typeset from LaTeX** — on equation slides, explainers and supplementary sections. Slides cannot render LaTeX, so convert it to SVG with MathJax (`mathjax-full`, `fontCache: 'none'`; light glyphs on dark bars, dark on light), upload it and place it with `<img>`. Symbols inside self-drawn schematics use matplotlib mathtext. Formulas in comment replies are written as `$...$`. Slides shows images only as standalone blocks: an `<img>` inside a line of text or a table cell renders as "[image]", so put formulas in their own block (tables with formulas become div grids) and refer to quantities in words in running text.
 7. **Figure slides**: cover every panel. Choose the layout by aspect ratio: single image on the left + steps on the right; two or three images in a row + 2×2 steps below. Fixed content:
    - "How to read it" in 4 steps (what the axes are → what each line/color means → where the key features are → which sentence in the text it supports);
    - a dark "Takeaway" bar with one sentence.
